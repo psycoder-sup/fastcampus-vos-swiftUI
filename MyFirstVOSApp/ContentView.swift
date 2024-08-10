@@ -23,6 +23,7 @@ struct ContentView: View {
                 Text("15")
             }
             ChildView()
+            Text("Hello my name is Osori")
             Spacer()
         }
         .padding()
