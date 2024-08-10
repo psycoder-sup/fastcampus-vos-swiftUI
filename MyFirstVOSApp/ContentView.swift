@@ -11,17 +11,24 @@ import RealityKitContent
 struct ContentView: View {
 
     var body: some View {
-        VStack {
-            Text("Welcome to VOS app")
+        VStack(alignment: .center) {
+            Text("Welcome to VOS app OSORI")
                 .font(.title)
                 .foregroundStyle(.yellow)
             
-            Text("This is a horizontal stack")
-                .font(.subheadline)
+            HStack {
+                Text("OSORI")
+                    .font(.subheadline)
+                Spacer()
+                Text("15")
+            }
+            ChildView()
+            Spacer()
         }
+        .padding()
     }
 }
 
-#Preview(windowStyle: .automatic) {
+#Preview(windowStyle: .automatic, traits: .fixedLayout(width: 500, height: 500)) {
     ContentView()
 }
