@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4351F29F2C6766F400F8F728 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 4351F29E2C6766F400F8F728 /* RealityKitContent */; };
+		4351F2C42C678B1000F8F728 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4351F2C32C678B0B00F8F728 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +25,7 @@
 		4351F2992C6766F400F8F728 /* MyFirstVOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstVOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4351F29D2C6766F400F8F728 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		4351F2B42C6766F600F8F728 /* MyFirstVOSAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstVOSAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4351F2C32C678B0B00F8F728 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -63,6 +65,7 @@
 		4351F2902C6766F400F8F728 = {
 			isa = PBXGroup;
 			children = (
+				4351F2C32C678B0B00F8F728 /* .gitignore */,
 				4351F29B2C6766F400F8F728 /* MyFirstVOSApp */,
 				4351F29C2C6766F400F8F728 /* Packages */,
 				4351F2B72C6766F600F8F728 /* MyFirstVOSAppTests */,
@@ -179,6 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4351F2C42C678B1000F8F728 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
