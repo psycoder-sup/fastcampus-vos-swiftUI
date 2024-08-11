@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ChildView: View {
+struct CircleImage: View {
     var body: some View {
         Image("cute-osori")
             .resizable()
@@ -21,5 +21,5 @@ struct ChildView: View {
 }
 
 #Preview(windowStyle: .automatic) {
-    ChildView()
+    CircleImage()
 }
