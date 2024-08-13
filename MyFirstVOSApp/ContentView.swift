@@ -8,39 +8,24 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
+@Observable
+class User {
+    var name = "Osori"
+    var image = "cute-osori"
+    var age = 13
+    var mainColor: Color = .yellow
+}
+
 struct ContentView: View {
     
-    @State private var name = "Osori"
-    @State private var isYellow = true
-
+    var user = User()
     var body: some View {
         VStack(alignment: .center) {
             Text("Welcome to VOS app")
                 .font(.title)
-                .foregroundStyle(isYellow ? .yellow : .blue)
+                .foregroundStyle(user.mainColor)
             
-            HStack {
-                Text("OSORI")
-                    .font(.subheadline)
-                Spacer()
-                Text("15")
-            }
-            Image("cute-osori")
-                .resizable()
-                .frame(width: 100, height: 100)
-                .clipShape(.circle)
-                .overlay {
-                    Circle().stroke(.white, lineWidth: 5)
-                }
-                .shadow(radius: 7)
-            Text("Hello my name is \(name)")
-            TextField("Enter new name", text: $name)
-                .padding()
-                .background()
-            Button("change title color to \(isYellow ? "Blue" : "Yellow")") {
-                isYellow.toggle()
-            }
-            .padding()
+            UserProfile(user: user)
             Spacer()
         }
         .padding()
