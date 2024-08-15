@@ -8,16 +8,8 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-@Observable
-class User {
-    var name = "Osori"
-    var image = "cute-osori"
-    var age = 13
-    var mainColor: Color = .yellow
-}
-
 struct ContentView: View {
-    
+    @Environment(\.openWindow) var openWindow
     var user = User()
     var body: some View {
         VStack(alignment: .center) {
@@ -25,8 +17,10 @@ struct ContentView: View {
                 .font(.title)
                 .foregroundStyle(user.mainColor)
             
-            UserProfile(user: user)
-            Spacer()
+            UserProfile()
+            Button("open new window") {
+                openWindow(id:"hello")
+            }
         }
         .padding()
     }

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct UserProfile: View {
-    var user: User
+    @Environment(User.self) var user
+    
     var body: some View {
         VStack {
             HStack {
@@ -61,5 +62,5 @@ extension Text {
 }
 
 #Preview(windowStyle: .automatic) {
-    UserProfile(user: User())
+    UserProfile()
 }
