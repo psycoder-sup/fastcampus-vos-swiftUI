@@ -13,12 +13,21 @@ struct UserProfile: View {
         VStack {
             HStack {
                 Text(user.name)
-                    .font(.subheadline)
+                    .modifier(BlueTag())
                 Spacer()
+                
                 Text(String(user.age))
+                    .blueTag()
             }
             .padding()
-            CircleImage(imageName: user.image)
+            Image(user.image)
+                .resizable()
+                .frame(width: 100, height: 100)
+                .clipShape(.circle)
+                .overlay {
+                    Circle().stroke(.white, lineWidth: 5)
+                }
+                .shadow(radius: 7)
             Text("Hello my name is \(user.name)")
                 .foregroundStyle(user.mainColor)
                 .font(.title)
@@ -29,6 +38,25 @@ struct UserProfile: View {
             }
             .padding()
         }
+    }
+}
+
+struct BlueTag: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.subheadline)
+            .padding(10)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.blue)
+            )
+            .foregroundStyle(.white)
+    }
+}
+
+extension Text {
+    func blueTag() -> some View {
+        modifier(BlueTag())
     }
 }
 
