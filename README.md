@@ -4,7 +4,7 @@
 
 # Image
 
-[osori](./images/cute-osori.jpeg)
+![osori](./images/cute-osori.jpeg)
 
 이미지를 다운받으시면, 위의 이미지를 우클릭 후 이미지 저장을 클릭하시면 됩니다.
 
